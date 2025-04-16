@@ -23,25 +23,34 @@ Partial Class SuperVideoStopForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CustomerInfoGroupBox = New System.Windows.Forms.GroupBox()
+        Me.CityLabel = New System.Windows.Forms.Label()
+        Me.CityTextBox = New System.Windows.Forms.TextBox()
+        Me.ZipCodeLabel = New System.Windows.Forms.Label()
+        Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.StateLabel = New System.Windows.Forms.Label()
+        Me.StateTextBox = New System.Windows.Forms.TextBox()
+        Me.CustomerIDLabel = New System.Windows.Forms.Label()
+        Me.CostomerIDTextBox = New System.Windows.Forms.TextBox()
+        Me.EmailLabel = New System.Windows.Forms.Label()
+        Me.PhoneNumberLabel = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.PhoneNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.AddressLabel = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.LastNameLabel = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.FirstNameLabel = New System.Windows.Forms.Label()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.AddressLabel = New System.Windows.Forms.Label()
-        Me.PhoneNumberTextBox = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.PhoneNumberLabel = New System.Windows.Forms.Label()
-        Me.EmailLabel = New System.Windows.Forms.Label()
-        Me.CustomerIDLabel = New System.Windows.Forms.Label()
-        Me.CostomerIDTextBox = New System.Windows.Forms.TextBox()
-        Me.StateLabel = New System.Windows.Forms.Label()
-        Me.StateTextBox = New System.Windows.Forms.TextBox()
-        Me.ZipCodeLabel = New System.Windows.Forms.Label()
-        Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
-        Me.CityLabel = New System.Windows.Forms.Label()
-        Me.CityTextBox = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DisplayComboBox = New System.Windows.Forms.ComboBox()
+        Me.DisplayListBox = New System.Windows.Forms.ListBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.EndButton = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.UpdateButton = New System.Windows.Forms.Button()
         Me.CustomerInfoGroupBox.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'CustomerInfoGroupBox
@@ -66,10 +75,122 @@ Partial Class SuperVideoStopForm
         Me.CustomerInfoGroupBox.Controls.Add(Me.FirstNameTextBox)
         Me.CustomerInfoGroupBox.Location = New System.Drawing.Point(0, 1)
         Me.CustomerInfoGroupBox.Name = "CustomerInfoGroupBox"
-        Me.CustomerInfoGroupBox.Size = New System.Drawing.Size(391, 446)
+        Me.CustomerInfoGroupBox.Size = New System.Drawing.Size(381, 446)
         Me.CustomerInfoGroupBox.TabIndex = 0
         Me.CustomerInfoGroupBox.TabStop = False
         Me.CustomerInfoGroupBox.Text = "CustomerInfo"
+        '
+        'CityLabel
+        '
+        Me.CityLabel.AutoSize = True
+        Me.CityLabel.Location = New System.Drawing.Point(13, 211)
+        Me.CityLabel.Name = "CityLabel"
+        Me.CityLabel.Size = New System.Drawing.Size(24, 13)
+        Me.CityLabel.TabIndex = 17
+        Me.CityLabel.Text = "City"
+        '
+        'CityTextBox
+        '
+        Me.CityTextBox.Location = New System.Drawing.Point(12, 227)
+        Me.CityTextBox.Name = "CityTextBox"
+        Me.CityTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.CityTextBox.TabIndex = 16
+        '
+        'ZipCodeLabel
+        '
+        Me.ZipCodeLabel.AutoSize = True
+        Me.ZipCodeLabel.Location = New System.Drawing.Point(13, 250)
+        Me.ZipCodeLabel.Name = "ZipCodeLabel"
+        Me.ZipCodeLabel.Size = New System.Drawing.Size(50, 13)
+        Me.ZipCodeLabel.TabIndex = 15
+        Me.ZipCodeLabel.Text = "Zip Code"
+        '
+        'ZipCodeTextBox
+        '
+        Me.ZipCodeTextBox.Location = New System.Drawing.Point(12, 266)
+        Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
+        Me.ZipCodeTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.ZipCodeTextBox.TabIndex = 14
+        '
+        'StateLabel
+        '
+        Me.StateLabel.AutoSize = True
+        Me.StateLabel.Location = New System.Drawing.Point(13, 169)
+        Me.StateLabel.Name = "StateLabel"
+        Me.StateLabel.Size = New System.Drawing.Size(32, 13)
+        Me.StateLabel.TabIndex = 13
+        Me.StateLabel.Text = "State"
+        '
+        'StateTextBox
+        '
+        Me.StateTextBox.Location = New System.Drawing.Point(12, 185)
+        Me.StateTextBox.Name = "StateTextBox"
+        Me.StateTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.StateTextBox.TabIndex = 12
+        '
+        'CustomerIDLabel
+        '
+        Me.CustomerIDLabel.AutoSize = True
+        Me.CustomerIDLabel.Location = New System.Drawing.Point(13, 388)
+        Me.CustomerIDLabel.Name = "CustomerIDLabel"
+        Me.CustomerIDLabel.Size = New System.Drawing.Size(62, 13)
+        Me.CustomerIDLabel.TabIndex = 11
+        Me.CustomerIDLabel.Text = "CustomerID"
+        '
+        'CostomerIDTextBox
+        '
+        Me.CostomerIDTextBox.Location = New System.Drawing.Point(12, 404)
+        Me.CostomerIDTextBox.Name = "CostomerIDTextBox"
+        Me.CostomerIDTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.CostomerIDTextBox.TabIndex = 10
+        '
+        'EmailLabel
+        '
+        Me.EmailLabel.AutoSize = True
+        Me.EmailLabel.Location = New System.Drawing.Point(13, 337)
+        Me.EmailLabel.Name = "EmailLabel"
+        Me.EmailLabel.Size = New System.Drawing.Size(32, 13)
+        Me.EmailLabel.TabIndex = 9
+        Me.EmailLabel.Text = "Email"
+        '
+        'PhoneNumberLabel
+        '
+        Me.PhoneNumberLabel.AutoSize = True
+        Me.PhoneNumberLabel.Location = New System.Drawing.Point(13, 292)
+        Me.PhoneNumberLabel.Name = "PhoneNumberLabel"
+        Me.PhoneNumberLabel.Size = New System.Drawing.Size(45, 13)
+        Me.PhoneNumberLabel.TabIndex = 8
+        Me.PhoneNumberLabel.Text = "Phone#"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(12, 353)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(218, 20)
+        Me.TextBox4.TabIndex = 7
+        '
+        'PhoneNumberTextBox
+        '
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(12, 308)
+        Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
+        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.PhoneNumberTextBox.TabIndex = 6
+        '
+        'AddressLabel
+        '
+        Me.AddressLabel.AutoSize = True
+        Me.AddressLabel.Location = New System.Drawing.Point(13, 117)
+        Me.AddressLabel.Name = "AddressLabel"
+        Me.AddressLabel.Size = New System.Drawing.Size(45, 13)
+        Me.AddressLabel.TabIndex = 5
+        Me.AddressLabel.Text = "Address"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(12, 133)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(218, 20)
+        Me.TextBox1.TabIndex = 4
         '
         'LastNameLabel
         '
@@ -103,128 +224,86 @@ Partial Class SuperVideoStopForm
         Me.FirstNameTextBox.Size = New System.Drawing.Size(218, 20)
         Me.FirstNameTextBox.TabIndex = 0
         '
-        'TextBox1
+        'GroupBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 133)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(218, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.GroupBox1.Controls.Add(Me.DisplayComboBox)
+        Me.GroupBox1.Controls.Add(Me.DisplayListBox)
+        Me.GroupBox1.Location = New System.Drawing.Point(387, 9)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(401, 292)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
         '
-        'AddressLabel
+        'DisplayComboBox
         '
-        Me.AddressLabel.AutoSize = True
-        Me.AddressLabel.Location = New System.Drawing.Point(13, 117)
-        Me.AddressLabel.Name = "AddressLabel"
-        Me.AddressLabel.Size = New System.Drawing.Size(45, 13)
-        Me.AddressLabel.TabIndex = 5
-        Me.AddressLabel.Text = "Address"
+        Me.DisplayComboBox.FormattingEnabled = True
+        Me.DisplayComboBox.Location = New System.Drawing.Point(29, 22)
+        Me.DisplayComboBox.Name = "DisplayComboBox"
+        Me.DisplayComboBox.Size = New System.Drawing.Size(184, 21)
+        Me.DisplayComboBox.TabIndex = 1
         '
-        'PhoneNumberTextBox
+        'DisplayListBox
         '
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(12, 308)
-        Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
-        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(218, 20)
-        Me.PhoneNumberTextBox.TabIndex = 6
+        Me.DisplayListBox.FormattingEnabled = True
+        Me.DisplayListBox.Location = New System.Drawing.Point(28, 60)
+        Me.DisplayListBox.Name = "DisplayListBox"
+        Me.DisplayListBox.Size = New System.Drawing.Size(356, 212)
+        Me.DisplayListBox.TabIndex = 0
         '
-        'TextBox4
+        'GroupBox2
         '
-        Me.TextBox4.Location = New System.Drawing.Point(12, 353)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(218, 20)
-        Me.TextBox4.TabIndex = 7
+        Me.GroupBox2.Controls.Add(Me.EndButton)
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.UpdateButton)
+        Me.GroupBox2.Location = New System.Drawing.Point(387, 307)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(409, 139)
+        Me.GroupBox2.TabIndex = 2
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "GroupBox2"
         '
-        'PhoneNumberLabel
+        'EndButton
         '
-        Me.PhoneNumberLabel.AutoSize = True
-        Me.PhoneNumberLabel.Location = New System.Drawing.Point(13, 292)
-        Me.PhoneNumberLabel.Name = "PhoneNumberLabel"
-        Me.PhoneNumberLabel.Size = New System.Drawing.Size(45, 13)
-        Me.PhoneNumberLabel.TabIndex = 8
-        Me.PhoneNumberLabel.Text = "Phone#"
+        Me.EndButton.Location = New System.Drawing.Point(272, 45)
+        Me.EndButton.Name = "EndButton"
+        Me.EndButton.Size = New System.Drawing.Size(127, 72)
+        Me.EndButton.TabIndex = 2
+        Me.EndButton.Text = "&End"
+        Me.EndButton.UseVisualStyleBackColor = True
         '
-        'EmailLabel
+        'Button2
         '
-        Me.EmailLabel.AutoSize = True
-        Me.EmailLabel.Location = New System.Drawing.Point(13, 337)
-        Me.EmailLabel.Name = "EmailLabel"
-        Me.EmailLabel.Size = New System.Drawing.Size(32, 13)
-        Me.EmailLabel.TabIndex = 9
-        Me.EmailLabel.Text = "Email"
+        Me.Button2.Location = New System.Drawing.Point(139, 47)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(127, 72)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'CustomerIDLabel
+        'UpdateButton
         '
-        Me.CustomerIDLabel.AutoSize = True
-        Me.CustomerIDLabel.Location = New System.Drawing.Point(13, 388)
-        Me.CustomerIDLabel.Name = "CustomerIDLabel"
-        Me.CustomerIDLabel.Size = New System.Drawing.Size(62, 13)
-        Me.CustomerIDLabel.TabIndex = 11
-        Me.CustomerIDLabel.Text = "CustomerID"
-        '
-        'CostomerIDTextBox
-        '
-        Me.CostomerIDTextBox.Location = New System.Drawing.Point(12, 404)
-        Me.CostomerIDTextBox.Name = "CostomerIDTextBox"
-        Me.CostomerIDTextBox.Size = New System.Drawing.Size(218, 20)
-        Me.CostomerIDTextBox.TabIndex = 10
-        '
-        'StateLabel
-        '
-        Me.StateLabel.AutoSize = True
-        Me.StateLabel.Location = New System.Drawing.Point(13, 169)
-        Me.StateLabel.Name = "StateLabel"
-        Me.StateLabel.Size = New System.Drawing.Size(32, 13)
-        Me.StateLabel.TabIndex = 13
-        Me.StateLabel.Text = "State"
-        '
-        'StateTextBox
-        '
-        Me.StateTextBox.Location = New System.Drawing.Point(12, 185)
-        Me.StateTextBox.Name = "StateTextBox"
-        Me.StateTextBox.Size = New System.Drawing.Size(218, 20)
-        Me.StateTextBox.TabIndex = 12
-        '
-        'ZipCodeLabel
-        '
-        Me.ZipCodeLabel.AutoSize = True
-        Me.ZipCodeLabel.Location = New System.Drawing.Point(13, 250)
-        Me.ZipCodeLabel.Name = "ZipCodeLabel"
-        Me.ZipCodeLabel.Size = New System.Drawing.Size(50, 13)
-        Me.ZipCodeLabel.TabIndex = 15
-        Me.ZipCodeLabel.Text = "Zip Code"
-        '
-        'ZipCodeTextBox
-        '
-        Me.ZipCodeTextBox.Location = New System.Drawing.Point(12, 266)
-        Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
-        Me.ZipCodeTextBox.Size = New System.Drawing.Size(218, 20)
-        Me.ZipCodeTextBox.TabIndex = 14
-        '
-        'CityLabel
-        '
-        Me.CityLabel.AutoSize = True
-        Me.CityLabel.Location = New System.Drawing.Point(13, 211)
-        Me.CityLabel.Name = "CityLabel"
-        Me.CityLabel.Size = New System.Drawing.Size(24, 13)
-        Me.CityLabel.TabIndex = 17
-        Me.CityLabel.Text = "City"
-        '
-        'CityTextBox
-        '
-        Me.CityTextBox.Location = New System.Drawing.Point(12, 227)
-        Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New System.Drawing.Size(218, 20)
-        Me.CityTextBox.TabIndex = 16
+        Me.UpdateButton.Location = New System.Drawing.Point(6, 45)
+        Me.UpdateButton.Name = "UpdateButton"
+        Me.UpdateButton.Size = New System.Drawing.Size(127, 72)
+        Me.UpdateButton.TabIndex = 0
+        Me.UpdateButton.Text = "&Update"
+        Me.UpdateButton.UseVisualStyleBackColor = True
         '
         'SuperVideoStopForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CustomerInfoGroupBox)
         Me.Name = "SuperVideoStopForm"
         Me.Text = "Form1"
         Me.CustomerInfoGroupBox.ResumeLayout(False)
         Me.CustomerInfoGroupBox.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -248,4 +327,11 @@ Partial Class SuperVideoStopForm
     Friend WithEvents ZipCodeTextBox As TextBox
     Friend WithEvents CityLabel As Label
     Friend WithEvents CityTextBox As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents DisplayComboBox As ComboBox
+    Friend WithEvents DisplayListBox As ListBox
+    Friend WithEvents EndButton As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents UpdateButton As Button
 End Class
