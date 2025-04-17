@@ -20,6 +20,11 @@ Public Class SuperVideoStopForm
                     If temp.Length = 4 Then 'Ignore malformed records
                         temp(0) = Replace(temp(0), "$", "") 'Cleans the First name
                         DisplayListBox.Items.Add(temp(0))
+                        WriteToFile(temp(0))
+                        WriteToFile(temp(1))
+                        WriteToFile(temp(2))
+                        WriteToFile(temp(3))
+                        WriteLine(fileNumber, "")
                     End If
                 End If
             Loop
@@ -31,6 +36,14 @@ Public Class SuperVideoStopForm
         End Try
     End Sub
 
+    Sub WriteToFile(newRecord As String)
+        Dim filePath As String = "CustomerData.txt"
+        Dim fileNumber As Integer = FreeFile()
+
+        FileOpen(fileNumber, filePath, OpenMode.Append)
+        Write(fileNumber, newRecord)
+        FileClose(fileNumber)
+    End Sub
     ' Event Handleers below here ********************************************************
     Private Sub EndButton_Click(sender As Object, e As EventArgs) Handles EndButton.Click
         Me.Close()
