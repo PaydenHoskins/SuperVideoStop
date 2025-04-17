@@ -46,7 +46,7 @@ Partial Class SuperVideoStopForm
         Me.DisplayListBox = New System.Windows.Forms.ListBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.EndButton = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ClearButton = New System.Windows.Forms.Button()
         Me.UpdateButton = New System.Windows.Forms.Button()
         Me.CustomerInfoGroupBox.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -254,7 +254,7 @@ Partial Class SuperVideoStopForm
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.EndButton)
-        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.ClearButton)
         Me.GroupBox2.Controls.Add(Me.UpdateButton)
         Me.GroupBox2.Location = New System.Drawing.Point(387, 307)
         Me.GroupBox2.Name = "GroupBox2"
@@ -272,14 +272,14 @@ Partial Class SuperVideoStopForm
         Me.EndButton.Text = "&End"
         Me.EndButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ClearButton
         '
-        Me.Button2.Location = New System.Drawing.Point(139, 47)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(127, 72)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ClearButton.Location = New System.Drawing.Point(139, 47)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(127, 72)
+        Me.ClearButton.TabIndex = 1
+        Me.ClearButton.Text = "&Clear"
+        Me.ClearButton.UseVisualStyleBackColor = True
         '
         'UpdateButton
         '
@@ -332,6 +332,6 @@ Partial Class SuperVideoStopForm
     Friend WithEvents DisplayComboBox As ComboBox
     Friend WithEvents DisplayListBox As ListBox
     Friend WithEvents EndButton As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ClearButton As Button
     Friend WithEvents UpdateButton As Button
 End Class
