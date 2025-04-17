@@ -24,7 +24,7 @@ Public Class SuperVideoStopForm
                         WriteToFile(temp(1))
                         WriteToFile(temp(2))
                         WriteToFile(temp(3))
-                        WriteLine(fileNumber, "")
+                        WriteToFile(vbNewLine)
                     End If
                 End If
             Loop
