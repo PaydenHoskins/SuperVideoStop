@@ -10,6 +10,7 @@ Public Class SuperVideoStopForm
         Dim fileNumber As Integer = FreeFile()
         Dim currentRecord As String = ""
         Dim temp() As String ' Use for splitting customer data
+        Static currentID As Integer = 600
         Try
             FileOpen(fileNumber, filePath, OpenMode.Input)
             Do Until EOF(fileNumber)
@@ -22,9 +23,14 @@ Public Class SuperVideoStopForm
                         DisplayListBox.Items.Add(temp(0))
                         WriteToFile(temp(0))
                         WriteToFile(temp(1))
+                        WriteToFile("")
                         WriteToFile(temp(2))
+                        WriteToFile("ID")
+                        WriteToFile("")
+                        WriteToFile("")
                         WriteToFile(temp(3))
-                        WriteToFile(vbNewLine)
+                        WriteToFile($"000631{currentID}", True)
+                        currentID += 1
                     End If
                 End If
             Loop
@@ -36,13 +42,20 @@ Public Class SuperVideoStopForm
         End Try
     End Sub
 
-    Sub WriteToFile(newRecord As String)
+    Sub WriteToFile(newRecord As String, Optional newLine As Boolean = False)
         Dim filePath As String = "CustomerData.txt"
         Dim fileNumber As Integer = FreeFile()
+        Try
+            FileOpen(fileNumber, filePath, OpenMode.Append)
+            Write(fileNumber, newRecord)
+            If newLine Then
+                WriteLine(fileNumber)
+            End If
+            FileClose(fileNumber)
 
-        FileOpen(fileNumber, filePath, OpenMode.Append)
-        Write(fileNumber, newRecord)
-        FileClose(fileNumber)
+        Catch ex As Exception
+
+        End Try
     End Sub
     ' Event Handleers below here ********************************************************
     Private Sub EndButton_Click(sender As Object, e As EventArgs) Handles EndButton.Click

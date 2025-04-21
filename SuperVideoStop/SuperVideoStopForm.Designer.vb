@@ -75,7 +75,7 @@ Partial Class SuperVideoStopForm
         Me.CustomerInfoGroupBox.Controls.Add(Me.FirstNameTextBox)
         Me.CustomerInfoGroupBox.Location = New System.Drawing.Point(0, 1)
         Me.CustomerInfoGroupBox.Name = "CustomerInfoGroupBox"
-        Me.CustomerInfoGroupBox.Size = New System.Drawing.Size(381, 446)
+        Me.CustomerInfoGroupBox.Size = New System.Drawing.Size(244, 446)
         Me.CustomerInfoGroupBox.TabIndex = 0
         Me.CustomerInfoGroupBox.TabStop = False
         Me.CustomerInfoGroupBox.Text = "CustomerInfo"
@@ -228,9 +228,9 @@ Partial Class SuperVideoStopForm
         '
         Me.GroupBox1.Controls.Add(Me.DisplayComboBox)
         Me.GroupBox1.Controls.Add(Me.DisplayListBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(387, 9)
+        Me.GroupBox1.Location = New System.Drawing.Point(250, 9)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(401, 292)
+        Me.GroupBox1.Size = New System.Drawing.Size(538, 292)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
@@ -238,7 +238,7 @@ Partial Class SuperVideoStopForm
         'DisplayComboBox
         '
         Me.DisplayComboBox.FormattingEnabled = True
-        Me.DisplayComboBox.Location = New System.Drawing.Point(29, 22)
+        Me.DisplayComboBox.Location = New System.Drawing.Point(176, 25)
         Me.DisplayComboBox.Name = "DisplayComboBox"
         Me.DisplayComboBox.Size = New System.Drawing.Size(184, 21)
         Me.DisplayComboBox.TabIndex = 1
@@ -246,7 +246,7 @@ Partial Class SuperVideoStopForm
         'DisplayListBox
         '
         Me.DisplayListBox.FormattingEnabled = True
-        Me.DisplayListBox.Location = New System.Drawing.Point(28, 60)
+        Me.DisplayListBox.Location = New System.Drawing.Point(176, 66)
         Me.DisplayListBox.Name = "DisplayListBox"
         Me.DisplayListBox.Size = New System.Drawing.Size(356, 212)
         Me.DisplayListBox.TabIndex = 0
@@ -256,16 +256,16 @@ Partial Class SuperVideoStopForm
         Me.GroupBox2.Controls.Add(Me.EndButton)
         Me.GroupBox2.Controls.Add(Me.ClearButton)
         Me.GroupBox2.Controls.Add(Me.UpdateButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(387, 307)
+        Me.GroupBox2.Location = New System.Drawing.Point(250, 307)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(409, 139)
+        Me.GroupBox2.Size = New System.Drawing.Size(546, 139)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "GroupBox2"
         '
         'EndButton
         '
-        Me.EndButton.Location = New System.Drawing.Point(272, 45)
+        Me.EndButton.Location = New System.Drawing.Point(405, 45)
         Me.EndButton.Name = "EndButton"
         Me.EndButton.Size = New System.Drawing.Size(127, 72)
         Me.EndButton.TabIndex = 2
@@ -274,7 +274,7 @@ Partial Class SuperVideoStopForm
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(139, 47)
+        Me.ClearButton.Location = New System.Drawing.Point(208, 45)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(127, 72)
         Me.ClearButton.TabIndex = 1
@@ -283,7 +283,7 @@ Partial Class SuperVideoStopForm
         '
         'UpdateButton
         '
-        Me.UpdateButton.Location = New System.Drawing.Point(6, 45)
+        Me.UpdateButton.Location = New System.Drawing.Point(16, 45)
         Me.UpdateButton.Name = "UpdateButton"
         Me.UpdateButton.Size = New System.Drawing.Size(127, 72)
         Me.UpdateButton.TabIndex = 0
