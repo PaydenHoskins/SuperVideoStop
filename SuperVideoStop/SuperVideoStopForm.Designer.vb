@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SuperVideoStopForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class SuperVideoStopForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.CustomerInfoGroupBox = New System.Windows.Forms.GroupBox()
         Me.CityLabel = New System.Windows.Forms.Label()
@@ -48,9 +48,15 @@ Partial Class SuperVideoStopForm
         Me.EndButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.UpdateButton = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.TopMenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.FIleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerInfoGroupBox.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.TopMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'CustomerInfoGroupBox
@@ -73,9 +79,9 @@ Partial Class SuperVideoStopForm
         Me.CustomerInfoGroupBox.Controls.Add(Me.TextBox2)
         Me.CustomerInfoGroupBox.Controls.Add(Me.FirstNameLabel)
         Me.CustomerInfoGroupBox.Controls.Add(Me.FirstNameTextBox)
-        Me.CustomerInfoGroupBox.Location = New System.Drawing.Point(0, 1)
+        Me.CustomerInfoGroupBox.Location = New System.Drawing.Point(0, 56)
         Me.CustomerInfoGroupBox.Name = "CustomerInfoGroupBox"
-        Me.CustomerInfoGroupBox.Size = New System.Drawing.Size(244, 446)
+        Me.CustomerInfoGroupBox.Size = New System.Drawing.Size(244, 391)
         Me.CustomerInfoGroupBox.TabIndex = 0
         Me.CustomerInfoGroupBox.TabStop = False
         Me.CustomerInfoGroupBox.Text = "CustomerInfo"
@@ -83,7 +89,7 @@ Partial Class SuperVideoStopForm
         'CityLabel
         '
         Me.CityLabel.AutoSize = True
-        Me.CityLabel.Location = New System.Drawing.Point(13, 211)
+        Me.CityLabel.Location = New System.Drawing.Point(13, 177)
         Me.CityLabel.Name = "CityLabel"
         Me.CityLabel.Size = New System.Drawing.Size(24, 13)
         Me.CityLabel.TabIndex = 17
@@ -91,7 +97,7 @@ Partial Class SuperVideoStopForm
         '
         'CityTextBox
         '
-        Me.CityTextBox.Location = New System.Drawing.Point(12, 227)
+        Me.CityTextBox.Location = New System.Drawing.Point(12, 193)
         Me.CityTextBox.Name = "CityTextBox"
         Me.CityTextBox.Size = New System.Drawing.Size(218, 20)
         Me.CityTextBox.TabIndex = 16
@@ -99,7 +105,7 @@ Partial Class SuperVideoStopForm
         'ZipCodeLabel
         '
         Me.ZipCodeLabel.AutoSize = True
-        Me.ZipCodeLabel.Location = New System.Drawing.Point(13, 250)
+        Me.ZipCodeLabel.Location = New System.Drawing.Point(13, 216)
         Me.ZipCodeLabel.Name = "ZipCodeLabel"
         Me.ZipCodeLabel.Size = New System.Drawing.Size(50, 13)
         Me.ZipCodeLabel.TabIndex = 15
@@ -107,7 +113,7 @@ Partial Class SuperVideoStopForm
         '
         'ZipCodeTextBox
         '
-        Me.ZipCodeTextBox.Location = New System.Drawing.Point(12, 266)
+        Me.ZipCodeTextBox.Location = New System.Drawing.Point(12, 232)
         Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
         Me.ZipCodeTextBox.Size = New System.Drawing.Size(218, 20)
         Me.ZipCodeTextBox.TabIndex = 14
@@ -115,7 +121,7 @@ Partial Class SuperVideoStopForm
         'StateLabel
         '
         Me.StateLabel.AutoSize = True
-        Me.StateLabel.Location = New System.Drawing.Point(13, 169)
+        Me.StateLabel.Location = New System.Drawing.Point(13, 135)
         Me.StateLabel.Name = "StateLabel"
         Me.StateLabel.Size = New System.Drawing.Size(32, 13)
         Me.StateLabel.TabIndex = 13
@@ -123,7 +129,7 @@ Partial Class SuperVideoStopForm
         '
         'StateTextBox
         '
-        Me.StateTextBox.Location = New System.Drawing.Point(12, 185)
+        Me.StateTextBox.Location = New System.Drawing.Point(12, 151)
         Me.StateTextBox.Name = "StateTextBox"
         Me.StateTextBox.Size = New System.Drawing.Size(218, 20)
         Me.StateTextBox.TabIndex = 12
@@ -131,7 +137,7 @@ Partial Class SuperVideoStopForm
         'CustomerIDLabel
         '
         Me.CustomerIDLabel.AutoSize = True
-        Me.CustomerIDLabel.Location = New System.Drawing.Point(13, 388)
+        Me.CustomerIDLabel.Location = New System.Drawing.Point(13, 344)
         Me.CustomerIDLabel.Name = "CustomerIDLabel"
         Me.CustomerIDLabel.Size = New System.Drawing.Size(62, 13)
         Me.CustomerIDLabel.TabIndex = 11
@@ -139,7 +145,7 @@ Partial Class SuperVideoStopForm
         '
         'CostomerIDTextBox
         '
-        Me.CostomerIDTextBox.Location = New System.Drawing.Point(12, 404)
+        Me.CostomerIDTextBox.Location = New System.Drawing.Point(12, 363)
         Me.CostomerIDTextBox.Name = "CostomerIDTextBox"
         Me.CostomerIDTextBox.Size = New System.Drawing.Size(218, 20)
         Me.CostomerIDTextBox.TabIndex = 10
@@ -147,7 +153,7 @@ Partial Class SuperVideoStopForm
         'EmailLabel
         '
         Me.EmailLabel.AutoSize = True
-        Me.EmailLabel.Location = New System.Drawing.Point(13, 337)
+        Me.EmailLabel.Location = New System.Drawing.Point(13, 303)
         Me.EmailLabel.Name = "EmailLabel"
         Me.EmailLabel.Size = New System.Drawing.Size(32, 13)
         Me.EmailLabel.TabIndex = 9
@@ -156,7 +162,7 @@ Partial Class SuperVideoStopForm
         'PhoneNumberLabel
         '
         Me.PhoneNumberLabel.AutoSize = True
-        Me.PhoneNumberLabel.Location = New System.Drawing.Point(13, 292)
+        Me.PhoneNumberLabel.Location = New System.Drawing.Point(13, 258)
         Me.PhoneNumberLabel.Name = "PhoneNumberLabel"
         Me.PhoneNumberLabel.Size = New System.Drawing.Size(45, 13)
         Me.PhoneNumberLabel.TabIndex = 8
@@ -164,14 +170,14 @@ Partial Class SuperVideoStopForm
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(12, 353)
+        Me.TextBox4.Location = New System.Drawing.Point(12, 319)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(218, 20)
         Me.TextBox4.TabIndex = 7
         '
         'PhoneNumberTextBox
         '
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(12, 308)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(12, 274)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
         Me.PhoneNumberTextBox.Size = New System.Drawing.Size(218, 20)
         Me.PhoneNumberTextBox.TabIndex = 6
@@ -179,7 +185,7 @@ Partial Class SuperVideoStopForm
         'AddressLabel
         '
         Me.AddressLabel.AutoSize = True
-        Me.AddressLabel.Location = New System.Drawing.Point(13, 117)
+        Me.AddressLabel.Location = New System.Drawing.Point(13, 95)
         Me.AddressLabel.Name = "AddressLabel"
         Me.AddressLabel.Size = New System.Drawing.Size(45, 13)
         Me.AddressLabel.TabIndex = 5
@@ -187,7 +193,7 @@ Partial Class SuperVideoStopForm
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 133)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 111)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(218, 20)
         Me.TextBox1.TabIndex = 4
@@ -195,7 +201,7 @@ Partial Class SuperVideoStopForm
         'LastNameLabel
         '
         Me.LastNameLabel.AutoSize = True
-        Me.LastNameLabel.Location = New System.Drawing.Point(12, 67)
+        Me.LastNameLabel.Location = New System.Drawing.Point(12, 56)
         Me.LastNameLabel.Name = "LastNameLabel"
         Me.LastNameLabel.Size = New System.Drawing.Size(58, 13)
         Me.LastNameLabel.TabIndex = 3
@@ -203,7 +209,7 @@ Partial Class SuperVideoStopForm
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 83)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 72)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(218, 20)
         Me.TextBox2.TabIndex = 2
@@ -228,9 +234,9 @@ Partial Class SuperVideoStopForm
         '
         Me.GroupBox1.Controls.Add(Me.DisplayComboBox)
         Me.GroupBox1.Controls.Add(Me.DisplayListBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(250, 9)
+        Me.GroupBox1.Location = New System.Drawing.Point(250, 56)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(538, 292)
+        Me.GroupBox1.Size = New System.Drawing.Size(538, 245)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
@@ -238,7 +244,7 @@ Partial Class SuperVideoStopForm
         'DisplayComboBox
         '
         Me.DisplayComboBox.FormattingEnabled = True
-        Me.DisplayComboBox.Location = New System.Drawing.Point(176, 25)
+        Me.DisplayComboBox.Location = New System.Drawing.Point(176, 10)
         Me.DisplayComboBox.Name = "DisplayComboBox"
         Me.DisplayComboBox.Size = New System.Drawing.Size(184, 21)
         Me.DisplayComboBox.TabIndex = 1
@@ -246,9 +252,9 @@ Partial Class SuperVideoStopForm
         'DisplayListBox
         '
         Me.DisplayListBox.FormattingEnabled = True
-        Me.DisplayListBox.Location = New System.Drawing.Point(176, 66)
+        Me.DisplayListBox.Location = New System.Drawing.Point(176, 34)
         Me.DisplayListBox.Name = "DisplayListBox"
-        Me.DisplayListBox.Size = New System.Drawing.Size(356, 212)
+        Me.DisplayListBox.Size = New System.Drawing.Size(356, 199)
         Me.DisplayListBox.TabIndex = 0
         '
         'GroupBox2
@@ -290,21 +296,58 @@ Partial Class SuperVideoStopForm
         Me.UpdateButton.Text = "&Update"
         Me.UpdateButton.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'TopMenuStrip
+        '
+        Me.TopMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FIleToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.TopMenuStrip.Location = New System.Drawing.Point(0, 0)
+        Me.TopMenuStrip.Name = "TopMenuStrip"
+        Me.TopMenuStrip.Size = New System.Drawing.Size(800, 24)
+        Me.TopMenuStrip.TabIndex = 3
+        Me.TopMenuStrip.Text = "MenuStrip1"
+        '
+        'FIleToolStripMenuItem
+        '
+        Me.FIleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem})
+        Me.FIleToolStripMenuItem.Name = "FIleToolStripMenuItem"
+        Me.FIleToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FIleToolStripMenuItem.Text = "FIle"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'OpenToolStripMenuItem
+        '
+        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenToolStripMenuItem.Text = "Open"
+        '
         'SuperVideoStopForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.TopMenuStrip)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CustomerInfoGroupBox)
+        Me.MainMenuStrip = Me.TopMenuStrip
         Me.Name = "SuperVideoStopForm"
         Me.Text = "Form1"
         Me.CustomerInfoGroupBox.ResumeLayout(False)
         Me.CustomerInfoGroupBox.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
+        Me.TopMenuStrip.ResumeLayout(False)
+        Me.TopMenuStrip.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -334,4 +377,9 @@ Partial Class SuperVideoStopForm
     Friend WithEvents EndButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents UpdateButton As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents TopMenuStrip As MenuStrip
+    Friend WithEvents FIleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -41,7 +41,21 @@ Public Class SuperVideoStopForm
             MsgBox(ex.Message & vbNewLine & ex.StackTrace & vbNewLine)
         End Try
     End Sub
-
+    Sub LoadCustomerData()
+        Dim filePath As String = "..\..\CustomerData.dat"
+        Dim fileNumber As Integer = FreeFile()
+        Try
+            FileOpen(fileNumber, filePath, OpenMode.Input)
+            FileClose(fileNumber)
+        Catch noFile As Exception
+            OpenFileDialog1.FileName = ""
+            OpenFileDialog1.InitialDirectory = "C:\Users\payde\GitFiles\SuperVideoStop"
+            OpenFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
+            OpenFileDialog1.ShowDialog()
+            filePath = (OpenFileDialog1.FileName)
+            MsgBox($"Current file is {filePath}.")
+        End Try
+    End Sub
     Sub WriteToFile(newRecord As String, Optional newLine As Boolean = False)
         Dim filePath As String = "CustomerData.txt"
         Dim fileNumber As Integer = FreeFile()
@@ -69,4 +83,7 @@ Public Class SuperVideoStopForm
         Me.DisplayListBox.Items.Clear()
     End Sub
 
+    Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
+        LoadCustomerData()
+    End Sub
 End Class
