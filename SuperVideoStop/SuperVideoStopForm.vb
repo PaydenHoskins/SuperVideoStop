@@ -3,6 +3,7 @@
 Option Explicit On
 Option Strict On
 Imports System.IO
+Imports System.Linq.Expressions
 
 Public Class SuperVideoStopForm
     Sub ReadFromFile()
@@ -35,6 +36,7 @@ Public Class SuperVideoStopForm
                 End If
             Loop
             FileClose(fileNumber)
+
         Catch bob As FileNotFoundException
             MsgBox("Bob is very sad....")
         Catch ex As Exception
@@ -44,17 +46,35 @@ Public Class SuperVideoStopForm
     Sub LoadCustomerData()
         Dim filePath As String = "..\..\CustomerData.dat"
         Dim fileNumber As Integer = FreeFile()
-        Try
-            FileOpen(fileNumber, filePath, OpenMode.Input)
-            FileClose(fileNumber)
-        Catch noFile As Exception
-            OpenFileDialog1.FileName = ""
-            OpenFileDialog1.InitialDirectory = "C:\Users\payde\GitFiles\SuperVideoStop"
-            OpenFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
-            OpenFileDialog1.ShowDialog()
-            filePath = (OpenFileDialog1.FileName)
-            MsgBox($"Current file is {filePath}.")
-        End Try
+        Dim currentRecord As String
+        Dim InvalidFileName As Boolean = True
+
+        Do
+            Try
+                FileOpen(fileNumber, filePath, OpenMode.Input)
+                InvalidFileName = False
+                Do Until EOF(fileNumber)
+                    Input(fileNumber, currentRecord)
+                    MsgBox(currentRecord)
+
+                Loop
+
+                FileClose(fileNumber)
+            Catch noFile As FileNotFoundException
+                InvalidFileName = True
+                OpenFileDialog1.FileName = ""
+                OpenFileDialog1.InitialDirectory = "C:\Users\payde\GitFiles\SuperVideoStop"
+                OpenFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
+                OpenFileDialog1.ShowDialog()
+                filePath = (OpenFileDialog1.FileName)
+                MsgBox($"Current file is {filePath}.")
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Loop While InvalidFileName
+
+
     End Sub
     Sub WriteToFile(newRecord As String, Optional newLine As Boolean = False)
         Dim filePath As String = "CustomerData.txt"
@@ -71,6 +91,21 @@ Public Class SuperVideoStopForm
 
         End Try
     End Sub
+    Function GetCustomerNumber(filepath As String) As Integer
+        Dim count As Integer = 0
+        Dim fileNumber As Integer = FreeFile()
+        Try
+            FileOpen(fileNumber, filepath, OpenMode.Input)
+            Do Until EOF(fileNumber)
+                LineInput(fileNumber)
+                count += 1
+            Loop
+            FileClose(fileNumber)
+        Catch ex As Exception
+            'pass
+        End Try
+        Return count
+    End Function
     ' Event Handleers below here ********************************************************
     Private Sub EndButton_Click(sender As Object, e As EventArgs) Handles EndButton.Click
         Me.Close()
