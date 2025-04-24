@@ -48,15 +48,18 @@ Partial Class SuperVideoStopForm
         Me.EndButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.UpdateButton = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.TopMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FIleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BottomStatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.FileNameStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.CustomerInfoGroupBox.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TopMenuStrip.SuspendLayout()
+        Me.BottomStatusStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'CustomerInfoGroupBox
@@ -79,7 +82,7 @@ Partial Class SuperVideoStopForm
         Me.CustomerInfoGroupBox.Controls.Add(Me.TextBox2)
         Me.CustomerInfoGroupBox.Controls.Add(Me.FirstNameLabel)
         Me.CustomerInfoGroupBox.Controls.Add(Me.FirstNameTextBox)
-        Me.CustomerInfoGroupBox.Location = New System.Drawing.Point(0, 56)
+        Me.CustomerInfoGroupBox.Location = New System.Drawing.Point(0, 34)
         Me.CustomerInfoGroupBox.Name = "CustomerInfoGroupBox"
         Me.CustomerInfoGroupBox.Size = New System.Drawing.Size(244, 391)
         Me.CustomerInfoGroupBox.TabIndex = 0
@@ -234,7 +237,7 @@ Partial Class SuperVideoStopForm
         '
         Me.GroupBox1.Controls.Add(Me.DisplayComboBox)
         Me.GroupBox1.Controls.Add(Me.DisplayListBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(250, 56)
+        Me.GroupBox1.Location = New System.Drawing.Point(250, 41)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(538, 245)
         Me.GroupBox1.TabIndex = 1
@@ -262,7 +265,7 @@ Partial Class SuperVideoStopForm
         Me.GroupBox2.Controls.Add(Me.EndButton)
         Me.GroupBox2.Controls.Add(Me.ClearButton)
         Me.GroupBox2.Controls.Add(Me.UpdateButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(250, 307)
+        Me.GroupBox2.Location = New System.Drawing.Point(250, 286)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(546, 139)
         Me.GroupBox2.TabIndex = 2
@@ -296,9 +299,9 @@ Partial Class SuperVideoStopForm
         Me.UpdateButton.Text = "&Update"
         Me.UpdateButton.UseVisualStyleBackColor = True
         '
-        'OpenFileDialog1
+        'OpenFileDialog
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog.FileName = "OpenFileDialog"
         '
         'TopMenuStrip
         '
@@ -316,23 +319,39 @@ Partial Class SuperVideoStopForm
         Me.FIleToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FIleToolStripMenuItem.Text = "FIle"
         '
+        'OpenToolStripMenuItem
+        '
+        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.OpenToolStripMenuItem.Text = "Open"
+        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'OpenToolStripMenuItem
+        'BottomStatusStrip
         '
-        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.OpenToolStripMenuItem.Text = "Open"
+        Me.BottomStatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileNameStatusLabel})
+        Me.BottomStatusStrip.Location = New System.Drawing.Point(0, 428)
+        Me.BottomStatusStrip.Name = "BottomStatusStrip"
+        Me.BottomStatusStrip.Size = New System.Drawing.Size(800, 22)
+        Me.BottomStatusStrip.TabIndex = 4
+        Me.BottomStatusStrip.Text = "BottomStatusStrip"
+        '
+        'FileNameStatusLabel
+        '
+        Me.FileNameStatusLabel.Name = "FileNameStatusLabel"
+        Me.FileNameStatusLabel.Size = New System.Drawing.Size(40, 17)
+        Me.FileNameStatusLabel.Text = "NONE"
         '
         'SuperVideoStopForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BottomStatusStrip)
         Me.Controls.Add(Me.TopMenuStrip)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -346,6 +365,8 @@ Partial Class SuperVideoStopForm
         Me.GroupBox2.ResumeLayout(False)
         Me.TopMenuStrip.ResumeLayout(False)
         Me.TopMenuStrip.PerformLayout()
+        Me.BottomStatusStrip.ResumeLayout(False)
+        Me.BottomStatusStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -377,9 +398,11 @@ Partial Class SuperVideoStopForm
     Friend WithEvents EndButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents UpdateButton As Button
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents OpenFileDialog As OpenFileDialog
     Friend WithEvents TopMenuStrip As MenuStrip
     Friend WithEvents FIleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BottomStatusStrip As StatusStrip
+    Friend WithEvents FileNameStatusLabel As ToolStripStatusLabel
 End Class
