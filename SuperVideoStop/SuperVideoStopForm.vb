@@ -6,12 +6,24 @@ Imports System.IO
 Imports System.Linq.Expressions
 
 Public Class SuperVideoStopForm
-
+    Sub DisplayFilterData()
+        Dim _customers(,) As String = CustomersArray()
+        DisplayComboBox.Items.Clear()
+        If _customers IsNot Nothing Then
+            For row = 0 To _customers.GetUpperBound(0)
+                For column = 0 To _customers.GetUpperBound(1) 'UBound(_customers)
+                    If SearchTextBox.Text = _customers(row, column) Then
+                        DisplayComboBox.Items.Add($"{_customers(row, 1)}, {_customers(row, 0)}")
+                    End If
+                Next
+            Next
+        End If
+    End Sub
     Sub DisplayData()
         Dim _customers(,) As String = CustomersArray()
+
         If _customers IsNot Nothing Then
             For i = 0 To _customers.GetUpperBound(0) 'UBound(_customers)
-
                 DisplayComboBox.Items.Add($"{_customers(i, 1)} ,{_customers(i, 0)}")
                 DisplayComboBox.SelectedIndex() = 0
             Next
@@ -164,6 +176,29 @@ Public Class SuperVideoStopForm
     End Sub
 
     Private Sub DisplayComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DisplayComboBox.SelectedIndexChanged
-        Me.Text = DisplayComboBox.SelectedIndex.ToString
+        Dim temp() As String
+        Dim _customers(,) As String = CustomersArray()
+        temp = Split(DisplayComboBox.SelectedItem.ToString, ",")
+        temp(1) = temp(1).Trim()
+        temp(0) = temp(0).Trim()
+        If _customers IsNot Nothing Then
+            For i = 0 To _customers.GetUpperBound(0)
+                If temp(1) = _customers(i, 0) And temp(0) = _customers(i, 1) Then
+                    FirstNameTextBox.Text = _customers(i, 0)
+                    LastNameTextBox.Text = _customers(i, 1)
+                    AddressTextBox.Text = _customers(i, 2)
+                    StateTextBox.Text = _customers(i, 3)
+                    CityTextBox.Text = _customers(i, 4)
+                    ZipCodeTextBox.Text = _customers(i, 5)
+                    PhoneNumberTextBox.Text = _customers(i, 6)
+                    EmailTextBox.Text = _customers(i, 7)
+                    CustomerIDTextBox.Text = _customers(i, 8)
+                End If
+            Next
+        End If
+    End Sub
+
+    Private Sub SearchTextBox_TextChanged(sender As Object, e As EventArgs) Handles SearchTextBox.TextChanged
+        DisplayFilterData()
     End Sub
 End Class

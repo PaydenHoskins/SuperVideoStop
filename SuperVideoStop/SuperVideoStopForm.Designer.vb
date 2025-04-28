@@ -30,15 +30,15 @@ Partial Class SuperVideoStopForm
         Me.StateLabel = New System.Windows.Forms.Label()
         Me.StateTextBox = New System.Windows.Forms.TextBox()
         Me.CustomerIDLabel = New System.Windows.Forms.Label()
-        Me.CostomerIDTextBox = New System.Windows.Forms.TextBox()
+        Me.CustomerIDTextBox = New System.Windows.Forms.TextBox()
         Me.EmailLabel = New System.Windows.Forms.Label()
         Me.PhoneNumberLabel = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.PhoneNumberTextBox = New System.Windows.Forms.TextBox()
         Me.AddressLabel = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.AddressTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameLabel = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameLabel = New System.Windows.Forms.Label()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -55,6 +55,7 @@ Partial Class SuperVideoStopForm
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BottomStatusStrip = New System.Windows.Forms.StatusStrip()
         Me.FileNameStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.SearchTextBox = New System.Windows.Forms.TextBox()
         Me.CustomerInfoGroupBox.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -71,15 +72,15 @@ Partial Class SuperVideoStopForm
         Me.CustomerInfoGroupBox.Controls.Add(Me.StateLabel)
         Me.CustomerInfoGroupBox.Controls.Add(Me.StateTextBox)
         Me.CustomerInfoGroupBox.Controls.Add(Me.CustomerIDLabel)
-        Me.CustomerInfoGroupBox.Controls.Add(Me.CostomerIDTextBox)
+        Me.CustomerInfoGroupBox.Controls.Add(Me.CustomerIDTextBox)
         Me.CustomerInfoGroupBox.Controls.Add(Me.EmailLabel)
         Me.CustomerInfoGroupBox.Controls.Add(Me.PhoneNumberLabel)
-        Me.CustomerInfoGroupBox.Controls.Add(Me.TextBox4)
+        Me.CustomerInfoGroupBox.Controls.Add(Me.EmailTextBox)
         Me.CustomerInfoGroupBox.Controls.Add(Me.PhoneNumberTextBox)
         Me.CustomerInfoGroupBox.Controls.Add(Me.AddressLabel)
-        Me.CustomerInfoGroupBox.Controls.Add(Me.TextBox1)
+        Me.CustomerInfoGroupBox.Controls.Add(Me.AddressTextBox)
         Me.CustomerInfoGroupBox.Controls.Add(Me.LastNameLabel)
-        Me.CustomerInfoGroupBox.Controls.Add(Me.TextBox2)
+        Me.CustomerInfoGroupBox.Controls.Add(Me.LastNameTextBox)
         Me.CustomerInfoGroupBox.Controls.Add(Me.FirstNameLabel)
         Me.CustomerInfoGroupBox.Controls.Add(Me.FirstNameTextBox)
         Me.CustomerInfoGroupBox.Location = New System.Drawing.Point(0, 34)
@@ -146,12 +147,12 @@ Partial Class SuperVideoStopForm
         Me.CustomerIDLabel.TabIndex = 11
         Me.CustomerIDLabel.Text = "CustomerID"
         '
-        'CostomerIDTextBox
+        'CustomerIDTextBox
         '
-        Me.CostomerIDTextBox.Location = New System.Drawing.Point(12, 363)
-        Me.CostomerIDTextBox.Name = "CostomerIDTextBox"
-        Me.CostomerIDTextBox.Size = New System.Drawing.Size(218, 20)
-        Me.CostomerIDTextBox.TabIndex = 10
+        Me.CustomerIDTextBox.Location = New System.Drawing.Point(12, 363)
+        Me.CustomerIDTextBox.Name = "CustomerIDTextBox"
+        Me.CustomerIDTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.CustomerIDTextBox.TabIndex = 10
         '
         'EmailLabel
         '
@@ -171,12 +172,12 @@ Partial Class SuperVideoStopForm
         Me.PhoneNumberLabel.TabIndex = 8
         Me.PhoneNumberLabel.Text = "Phone#"
         '
-        'TextBox4
+        'EmailTextBox
         '
-        Me.TextBox4.Location = New System.Drawing.Point(12, 319)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(218, 20)
-        Me.TextBox4.TabIndex = 7
+        Me.EmailTextBox.Location = New System.Drawing.Point(12, 319)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.EmailTextBox.TabIndex = 7
         '
         'PhoneNumberTextBox
         '
@@ -194,12 +195,12 @@ Partial Class SuperVideoStopForm
         Me.AddressLabel.TabIndex = 5
         Me.AddressLabel.Text = "Address"
         '
-        'TextBox1
+        'AddressTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 111)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(218, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.AddressTextBox.Location = New System.Drawing.Point(12, 111)
+        Me.AddressTextBox.Name = "AddressTextBox"
+        Me.AddressTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.AddressTextBox.TabIndex = 4
         '
         'LastNameLabel
         '
@@ -210,12 +211,12 @@ Partial Class SuperVideoStopForm
         Me.LastNameLabel.TabIndex = 3
         Me.LastNameLabel.Text = "Last Name"
         '
-        'TextBox2
+        'LastNameTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 72)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(218, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.LastNameTextBox.Location = New System.Drawing.Point(12, 72)
+        Me.LastNameTextBox.Name = "LastNameTextBox"
+        Me.LastNameTextBox.Size = New System.Drawing.Size(218, 20)
+        Me.LastNameTextBox.TabIndex = 2
         '
         'FirstNameLabel
         '
@@ -235,6 +236,7 @@ Partial Class SuperVideoStopForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.SearchTextBox)
         Me.GroupBox1.Controls.Add(Me.DisplayComboBox)
         Me.GroupBox1.Controls.Add(Me.DisplayListBox)
         Me.GroupBox1.Location = New System.Drawing.Point(250, 34)
@@ -346,6 +348,13 @@ Partial Class SuperVideoStopForm
         Me.FileNameStatusLabel.Size = New System.Drawing.Size(40, 17)
         Me.FileNameStatusLabel.Text = "NONE"
         '
+        'SearchTextBox
+        '
+        Me.SearchTextBox.Location = New System.Drawing.Point(366, 10)
+        Me.SearchTextBox.Name = "SearchTextBox"
+        Me.SearchTextBox.Size = New System.Drawing.Size(166, 20)
+        Me.SearchTextBox.TabIndex = 18
+        '
         'SuperVideoStopForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -362,6 +371,7 @@ Partial Class SuperVideoStopForm
         Me.CustomerInfoGroupBox.ResumeLayout(False)
         Me.CustomerInfoGroupBox.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.TopMenuStrip.ResumeLayout(False)
         Me.TopMenuStrip.PerformLayout()
@@ -374,15 +384,15 @@ Partial Class SuperVideoStopForm
 
     Friend WithEvents CustomerInfoGroupBox As GroupBox
     Friend WithEvents LastNameLabel As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents LastNameTextBox As TextBox
     Friend WithEvents FirstNameLabel As Label
     Friend WithEvents FirstNameTextBox As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents AddressTextBox As TextBox
     Friend WithEvents AddressLabel As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents EmailTextBox As TextBox
     Friend WithEvents PhoneNumberTextBox As TextBox
     Friend WithEvents CustomerIDLabel As Label
-    Friend WithEvents CostomerIDTextBox As TextBox
+    Friend WithEvents CustomerIDTextBox As TextBox
     Friend WithEvents EmailLabel As Label
     Friend WithEvents PhoneNumberLabel As Label
     Friend WithEvents StateLabel As Label
@@ -405,4 +415,5 @@ Partial Class SuperVideoStopForm
     Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BottomStatusStrip As StatusStrip
     Friend WithEvents FileNameStatusLabel As ToolStripStatusLabel
+    Friend WithEvents SearchTextBox As TextBox
 End Class
