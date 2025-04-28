@@ -73,9 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SuperVideoStopForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="SuperVideoStopForm.vb" />
     <Compile Include="SuperVideoStopForm.Designer.vb">
       <DependentUpon>SuperVideoStopForm.vb</DependentUpon>
       <SubType>Form</SubType>

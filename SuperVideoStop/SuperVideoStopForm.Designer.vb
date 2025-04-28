@@ -237,9 +237,9 @@ Partial Class SuperVideoStopForm
         '
         Me.GroupBox1.Controls.Add(Me.DisplayComboBox)
         Me.GroupBox1.Controls.Add(Me.DisplayListBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(250, 41)
+        Me.GroupBox1.Location = New System.Drawing.Point(250, 34)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(538, 245)
+        Me.GroupBox1.Size = New System.Drawing.Size(538, 252)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
