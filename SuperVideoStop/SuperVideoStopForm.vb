@@ -4,30 +4,42 @@ Option Explicit On
 Option Strict On
 Imports System.IO
 Imports System.Linq.Expressions
-
+Imports Microsoft.VisualBasic.Strings
 Public Class SuperVideoStopForm
     Sub DisplayFilterData()
-        Dim _customers(,) As String = CustomersArray()
         DisplayComboBox.Items.Clear()
+        Dim _customers(,) As String = CustomersArray()
         If _customers IsNot Nothing Then
             For row = 0 To _customers.GetUpperBound(0)
                 For column = 0 To _customers.GetUpperBound(1) 'UBound(_customers)
-                    If SearchTextBox.Text = _customers(row, column) Then
-                        DisplayComboBox.Items.Add($"{_customers(row, 1)}, {_customers(row, 0)}")
+                    If InStr(_customers(row, column), SearchTextBox.Text) > 0 Then
+                        Select Case True
+                            Case NameRadioButton.Checked
+                                If DisplayComboBox.Items.Contains($"{_customers(row, 1)}, {_customers(row, 0)}") <> True Then
+                                    DisplayComboBox.Items.Add($"{_customers(row, 1)}, {_customers(row, 0)}")
+                                End If
+                            Case CityRadioButton.Checked
+                                If DisplayComboBox.Items.Contains($"{_customers(row, 3)}") <> True Then
+                                    DisplayComboBox.Items.Add($"{_customers(row, 3)}")
+                                End If
+                            Case CustomerIDRadioButton.Checked
+                        End Select
                     End If
                 Next
+                DisplayComboBox.Sorted = True
+                If DisplayComboBox.Items.Count >= 1 Then
+                    DisplayComboBox.SelectedIndex() = 0
+                End If
             Next
         End If
     End Sub
     Sub DisplayData()
         Dim _customers(,) As String = CustomersArray()
-
         If _customers IsNot Nothing Then
             For i = 0 To _customers.GetUpperBound(0) 'UBound(_customers)
                 DisplayComboBox.Items.Add($"{_customers(i, 1)} ,{_customers(i, 0)}")
                 DisplayComboBox.SelectedIndex() = 0
             Next
-
         End If
     End Sub
     Function CustomersArray(Optional customerData(,) As String = Nothing) As String(,)
@@ -158,6 +170,12 @@ Public Class SuperVideoStopForm
         End Try
         Return count
     End Function
+    Sub SetDefaults()
+        CaseCheckBox.Checked = False
+        NameRadioButton.Checked = True
+        CityRadioButton.Checked = False
+        CustomerIDRadioButton.Checked = False
+    End Sub
     ' Event Handleers below here ********************************************************
     Private Sub EndButton_Click(sender As Object, e As EventArgs) Handles EndButton.Click
         Me.Close()
@@ -195,10 +213,16 @@ Public Class SuperVideoStopForm
                     CustomerIDTextBox.Text = _customers(i, 8)
                 End If
             Next
+
         End If
     End Sub
-
-    Private Sub SearchTextBox_TextChanged(sender As Object, e As EventArgs) Handles SearchTextBox.TextChanged
+    Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
         DisplayFilterData()
+    End Sub
+
+    Private Sub SuperVideoStopForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        LoadCustomerData()
+        DisplayData()
+        SetDefaults()
     End Sub
 End Class

@@ -42,6 +42,8 @@ Partial Class SuperVideoStopForm
         Me.FirstNameLabel = New System.Windows.Forms.Label()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.SearchButton = New System.Windows.Forms.Button()
+        Me.SearchTextBox = New System.Windows.Forms.TextBox()
         Me.DisplayComboBox = New System.Windows.Forms.ComboBox()
         Me.DisplayListBox = New System.Windows.Forms.ListBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -55,7 +57,10 @@ Partial Class SuperVideoStopForm
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BottomStatusStrip = New System.Windows.Forms.StatusStrip()
         Me.FileNameStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.SearchTextBox = New System.Windows.Forms.TextBox()
+        Me.NameRadioButton = New System.Windows.Forms.RadioButton()
+        Me.CityRadioButton = New System.Windows.Forms.RadioButton()
+        Me.CustomerIDRadioButton = New System.Windows.Forms.RadioButton()
+        Me.CaseCheckBox = New System.Windows.Forms.CheckBox()
         Me.CustomerInfoGroupBox.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -236,6 +241,11 @@ Partial Class SuperVideoStopForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CaseCheckBox)
+        Me.GroupBox1.Controls.Add(Me.CustomerIDRadioButton)
+        Me.GroupBox1.Controls.Add(Me.CityRadioButton)
+        Me.GroupBox1.Controls.Add(Me.NameRadioButton)
+        Me.GroupBox1.Controls.Add(Me.SearchButton)
         Me.GroupBox1.Controls.Add(Me.SearchTextBox)
         Me.GroupBox1.Controls.Add(Me.DisplayComboBox)
         Me.GroupBox1.Controls.Add(Me.DisplayListBox)
@@ -245,6 +255,21 @@ Partial Class SuperVideoStopForm
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
+        '
+        'SearchButton
+        '
+        Me.SearchButton.Location = New System.Drawing.Point(490, 13)
+        Me.SearchButton.Name = "SearchButton"
+        Me.SearchButton.Size = New System.Drawing.Size(37, 16)
+        Me.SearchButton.TabIndex = 19
+        Me.SearchButton.UseVisualStyleBackColor = True
+        '
+        'SearchTextBox
+        '
+        Me.SearchTextBox.Location = New System.Drawing.Point(366, 10)
+        Me.SearchTextBox.Name = "SearchTextBox"
+        Me.SearchTextBox.Size = New System.Drawing.Size(118, 20)
+        Me.SearchTextBox.TabIndex = 18
         '
         'DisplayComboBox
         '
@@ -348,12 +373,48 @@ Partial Class SuperVideoStopForm
         Me.FileNameStatusLabel.Size = New System.Drawing.Size(40, 17)
         Me.FileNameStatusLabel.Text = "NONE"
         '
-        'SearchTextBox
+        'NameRadioButton
         '
-        Me.SearchTextBox.Location = New System.Drawing.Point(366, 10)
-        Me.SearchTextBox.Name = "SearchTextBox"
-        Me.SearchTextBox.Size = New System.Drawing.Size(166, 20)
-        Me.SearchTextBox.TabIndex = 18
+        Me.NameRadioButton.AutoSize = True
+        Me.NameRadioButton.Location = New System.Drawing.Point(35, 93)
+        Me.NameRadioButton.Name = "NameRadioButton"
+        Me.NameRadioButton.Size = New System.Drawing.Size(53, 17)
+        Me.NameRadioButton.TabIndex = 20
+        Me.NameRadioButton.TabStop = True
+        Me.NameRadioButton.Text = "Name"
+        Me.NameRadioButton.UseVisualStyleBackColor = True
+        '
+        'CityRadioButton
+        '
+        Me.CityRadioButton.AutoSize = True
+        Me.CityRadioButton.Location = New System.Drawing.Point(35, 128)
+        Me.CityRadioButton.Name = "CityRadioButton"
+        Me.CityRadioButton.Size = New System.Drawing.Size(42, 17)
+        Me.CityRadioButton.TabIndex = 21
+        Me.CityRadioButton.TabStop = True
+        Me.CityRadioButton.Text = "City"
+        Me.CityRadioButton.UseVisualStyleBackColor = True
+        '
+        'CustomerIDRadioButton
+        '
+        Me.CustomerIDRadioButton.AutoSize = True
+        Me.CustomerIDRadioButton.Location = New System.Drawing.Point(35, 168)
+        Me.CustomerIDRadioButton.Name = "CustomerIDRadioButton"
+        Me.CustomerIDRadioButton.Size = New System.Drawing.Size(83, 17)
+        Me.CustomerIDRadioButton.TabIndex = 22
+        Me.CustomerIDRadioButton.TabStop = True
+        Me.CustomerIDRadioButton.Text = "Customer ID"
+        Me.CustomerIDRadioButton.UseVisualStyleBackColor = True
+        '
+        'CaseCheckBox
+        '
+        Me.CaseCheckBox.AutoSize = True
+        Me.CaseCheckBox.Location = New System.Drawing.Point(35, 56)
+        Me.CaseCheckBox.Name = "CaseCheckBox"
+        Me.CaseCheckBox.Size = New System.Drawing.Size(93, 17)
+        Me.CaseCheckBox.TabIndex = 23
+        Me.CaseCheckBox.Text = "CaseSensitive"
+        Me.CaseCheckBox.UseVisualStyleBackColor = True
         '
         'SuperVideoStopForm
         '
@@ -416,4 +477,9 @@ Partial Class SuperVideoStopForm
     Friend WithEvents BottomStatusStrip As StatusStrip
     Friend WithEvents FileNameStatusLabel As ToolStripStatusLabel
     Friend WithEvents SearchTextBox As TextBox
+    Friend WithEvents SearchButton As Button
+    Friend WithEvents CaseCheckBox As CheckBox
+    Friend WithEvents CustomerIDRadioButton As RadioButton
+    Friend WithEvents CityRadioButton As RadioButton
+    Friend WithEvents NameRadioButton As RadioButton
 End Class
