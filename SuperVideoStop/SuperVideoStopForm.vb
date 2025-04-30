@@ -198,7 +198,8 @@ Public Class SuperVideoStopForm
 
     Private Sub DisplayComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DisplayComboBox.SelectedIndexChanged
         Select Case True
-            Case 
+            Case NameRadioButton.Checked
+
         End Select
     End Sub
     Sub FillTextBoxes()
