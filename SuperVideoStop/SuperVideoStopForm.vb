@@ -23,6 +23,9 @@ Public Class SuperVideoStopForm
                                     DisplayComboBox.Items.Add($"{_customers(row, 3)}")
                                 End If
                             Case CustomerIDRadioButton.Checked
+                                If DisplayComboBox.Items.Contains($"{_customers(row, 8)}") <> True Then
+                                    DisplayComboBox.Items.Add($"{_customers(row, 8)}")
+                                End If
                         End Select
                     End If
                 Next
@@ -194,6 +197,11 @@ Public Class SuperVideoStopForm
     End Sub
 
     Private Sub DisplayComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DisplayComboBox.SelectedIndexChanged
+        Select Case True
+            Case 
+        End Select
+    End Sub
+    Sub FillTextBoxes()
         Dim temp() As String
         Dim _customers(,) As String = CustomersArray()
         temp = Split(DisplayComboBox.SelectedItem.ToString, ",")
@@ -219,10 +227,12 @@ Public Class SuperVideoStopForm
     Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
         DisplayFilterData()
     End Sub
-
     Private Sub SuperVideoStopForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadCustomerData()
         DisplayData()
         SetDefaults()
+    End Sub
+    Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles NameRadioButton.CheckedChanged, CityRadioButton.CheckedChanged, CustomerIDRadioButton.CheckedChanged
+        DisplayFilterData()
     End Sub
 End Class
